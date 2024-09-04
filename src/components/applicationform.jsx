@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const ApplicationForm = () => {
   const { title, company } = useParams();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
