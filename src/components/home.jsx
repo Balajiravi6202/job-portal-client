@@ -11,7 +11,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/jobs');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/jobs`);
         if (Array.isArray(response.data)) {
           setJobs(response.data);
         } else {

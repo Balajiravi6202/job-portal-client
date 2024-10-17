@@ -33,7 +33,7 @@ const ApplicationForm = () => {
     formData.append('company', company);
 
     try {
-      await axios.post('http://localhost:5000/api/jobs/apply', formData, {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/jobs/apply`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
